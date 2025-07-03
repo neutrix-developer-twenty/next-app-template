@@ -145,6 +145,56 @@ export default function Home() {
           </Card>
         </div>
       </Container>
+
+      <Container mt="xl" mb="xl">
+        <div className="order-1 lg:order-none bg-white rounded-2xl p-10 shadow">
+          <Card title="Ignore this Form" shadow="sm" padding="lg" radius="md" withBorder>
+            <b>Handling the page unload case:</b>
+            <Text size="sm" c="green" mb="md">
+              If a form causes a full page reload (typical for a non-AJAX {`<form action="...">`}),
+              our handler will execute just before the unload. We must send the data quickly. We
+              will leverage the same technique already used in the script for sending data on
+              unload: navigator.sendBeacon(). In fact, the script already uses sendBeacon to record
+              session data when the page is closing, because beacon calls allow background sending
+              without blocking the unload. We can similarly package the lead info and use sendBeacon
+              to the /site-leads endpoint.
+            </Text>
+            <form action="/">
+              <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="md" mb="md">
+                <TextInput
+                  label="First Name"
+                  placeholder=""
+                  name="firstName"
+                  radius="md"
+                  variant="default"
+                  required
+                />
+                <TextInput
+                  label="Last Name"
+                  placeholder=""
+                  name="lastName"
+                  radius="md"
+                  variant="default"
+                  required
+                />
+              </SimpleGrid>
+
+              <TextInput
+                label="Email"
+                placeholder=""
+                type="email"
+                name="email"
+                radius="md"
+                variant="default"
+                required
+                mb="md"
+              />
+
+              <Button type="submit">Let's Talk</Button>
+            </form>
+          </Card>
+        </div>
+      </Container>
     </div>
   );
 }

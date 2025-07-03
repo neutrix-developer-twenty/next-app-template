@@ -27,6 +27,7 @@ export default function Home() {
               name="fullName"
               radius="md"
               variant="default"
+              required
             />
             <TextInput
               label="Email"
@@ -35,6 +36,7 @@ export default function Home() {
               radius="md"
               variant="default"
               type="text"
+              required
             />
           </SimpleGrid>
 

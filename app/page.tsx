@@ -1,5 +1,6 @@
 'use client';
 
+import { toast } from 'sonner';
 import {
   Button,
   Card,
@@ -25,7 +26,12 @@ export default function Home() {
           start tracking them as well.
         </Text>
 
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            toast.success('Form submitted successfully!');
+          }}
+        >
           <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="md" mb="md">
             <TextInput
               label="First Name"
@@ -60,7 +66,12 @@ export default function Home() {
             This form have password so it should not create any leads.
           </Text>
 
-          <form onSubmit={(e) => e.preventDefault()}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              toast.success('Form submitted successfully!');
+            }}
+          >
             <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="md" mb="md">
               <TextInput
                 label="First Name"
@@ -89,7 +100,12 @@ export default function Home() {
             <Text size="sm" c="green" fw="bold">
               This form should create lead.
             </Text>
-            <form onSubmit={(e) => e.preventDefault()}>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                toast.success('Form submitted successfully!');
+              }}
+            >
               <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="md" mb="md">
                 <TextInput
                   label="First Name"

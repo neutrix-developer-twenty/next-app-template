@@ -14,14 +14,14 @@ export default function Home() {
             <TextInput
               label="First Name"
               placeholder=""
-              name="firstName"
+              name="fullName"
               radius="md"
               variant="default"
             />
             <TextInput
-              label="Last Name"
+              label="Email"
               placeholder=""
-              name="lastName"
+              name="email"
               radius="md"
               variant="default"
               type="text"

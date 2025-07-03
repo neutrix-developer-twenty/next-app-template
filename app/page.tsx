@@ -1,10 +1,10 @@
 'use client';
 
-import { Button, Checkbox, SimpleGrid, Textarea, TextInput } from '@mantine/core';
+import { Button, Checkbox, Container, SimpleGrid, Textarea, TextInput } from '@mantine/core';
 
 export default function ContactUs() {
   return (
-    <div>
+    <Container mt="xl" mb="xl">
       <div className="order-1 lg:order-none bg-white rounded-2xl p-10 shadow">
         <form
           onSubmit={(e) => {
@@ -63,6 +63,6 @@ export default function ContactUs() {
           <Button type="submit">Let's Talk</Button>
         </form>
       </div>
-    </div>
+    </Container>
   );
 }

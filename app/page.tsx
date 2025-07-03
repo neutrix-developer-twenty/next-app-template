@@ -1,17 +1,15 @@
 'use client';
 
-import { Button, Checkbox, Container, SimpleGrid, Textarea, TextInput } from '@mantine/core';
+import { Button, Checkbox, Container, Modal, SimpleGrid, Textarea, TextInput } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 
-export default function ContactUs() {
+export default function Home() {
+  const [opened, { open, close }] = useDisclosure(false);
+
   return (
-    <Container mt="xl" mb="xl">
-      <div className="order-1 lg:order-none bg-white rounded-2xl p-10 shadow">
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            // Handle form submission logic here
-          }}
-        >
+    <div>
+      <Modal opened={opened} onClose={close} title="Authentication">
+        <form onSubmit={(e) => e.preventDefault()}>
           <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="md" mb="md">
             <TextInput
               label="First Name"
@@ -26,43 +24,96 @@ export default function ContactUs() {
               name="lastName"
               radius="md"
               variant="default"
+              type="text"
             />
           </SimpleGrid>
 
-          <TextInput
-            label="Email"
-            placeholder=""
-            type="email"
-            name="email"
-            radius="md"
-            variant="default"
-            mb="md"
-          />
-
-          <TextInput
-            label="Your Mobile Number"
-            placeholder=""
-            name="mobile"
-            radius="md"
-            variant="default"
-            mb="md"
-          />
-
-          <Textarea
-            label="Tell Us Something"
-            placeholder=""
-            name="message"
-            rows={5}
-            radius="md"
-            variant="default"
-            mb="md"
-          />
-
-          <Checkbox label="I agree with the processing of personal data." name="check" mb="md" />
-
-          <Button type="submit">Let's Talk</Button>
+          <Button type="submit">Login</Button>
         </form>
-      </div>
-    </Container>
+      </Modal>
+      <Container mt="xl" mb="xl">
+        <Button variant="default" onClick={open}>
+          Open modal
+        </Button>
+      </Container>
+      <Container mt="xl" mb="xl">
+        <form onSubmit={(e) => e.preventDefault()}>
+          <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="md" mb="md">
+            <TextInput
+              label="First Name"
+              placeholder=""
+              name="firstName"
+              radius="md"
+              variant="default"
+            />
+            <TextInput
+              label="Password"
+              placeholder=""
+              name="lastName"
+              radius="md"
+              variant="default"
+              type="password"
+            />
+          </SimpleGrid>
+
+          <Button type="submit">Login</Button>
+        </form>
+      </Container>
+      <Container mt="xl" mb="xl">
+        <div className="order-1 lg:order-none bg-white rounded-2xl p-10 shadow">
+          <form onSubmit={(e) => e.preventDefault()}>
+            <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="md" mb="md">
+              <TextInput
+                label="First Name"
+                placeholder=""
+                name="firstName"
+                radius="md"
+                variant="default"
+              />
+              <TextInput
+                label="Last Name"
+                placeholder=""
+                name="lastName"
+                radius="md"
+                variant="default"
+              />
+            </SimpleGrid>
+
+            <TextInput
+              label="Email"
+              placeholder=""
+              type="email"
+              name="email"
+              radius="md"
+              variant="default"
+              mb="md"
+            />
+
+            <TextInput
+              label="Your Mobile Number"
+              placeholder=""
+              name="mobile"
+              radius="md"
+              variant="default"
+              mb="md"
+            />
+
+            <Textarea
+              label="Tell Us Something"
+              placeholder=""
+              name="message"
+              rows={5}
+              radius="md"
+              variant="default"
+              mb="md"
+            />
+
+            <Checkbox label="I agree with the processing of personal data." name="check" mb="md" />
+
+            <Button type="submit">Let's Talk</Button>
+          </form>
+        </div>
+      </Container>
+    </div>
   );
 }

@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: any }) {
         <script
           async
           defer
-          src="https://neutrix-cms-external-script.vercel.app/neutrix.js?siteId=neu8Ea5zhV3"
+          src="https://neutrix-cms-external-script.vercel.app/neutrix.js?siteId=neuMf4rvd4v"
         />
         {/* <script async defer src="http://localhost:8080/neutrix.js?siteId=neuQojUNBAC" /> */}
         <ColorSchemeScript />

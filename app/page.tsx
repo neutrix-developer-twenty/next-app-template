@@ -69,6 +69,7 @@ export default function Home() {
                 name="firstName"
                 radius="md"
                 variant="default"
+                required
               />
               <TextInput
                 label="Last Name"
@@ -76,6 +77,7 @@ export default function Home() {
                 name="lastName"
                 radius="md"
                 variant="default"
+                required
               />
             </SimpleGrid>
 
@@ -86,6 +88,7 @@ export default function Home() {
               name="email"
               radius="md"
               variant="default"
+              required
               mb="md"
             />
 
@@ -108,7 +111,12 @@ export default function Home() {
               mb="md"
             />
 
-            <Checkbox label="I agree with the processing of personal data." name="check" mb="md" />
+            <Checkbox
+              required
+              label="I agree with the processing of personal data."
+              name="check"
+              mb="md"
+            />
 
             <Button type="submit">Let's Talk</Button>
           </form>

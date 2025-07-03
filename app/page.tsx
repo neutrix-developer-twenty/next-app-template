@@ -17,7 +17,6 @@ export default function ContactUs() {
               label="First Name"
               placeholder=""
               name="firstName"
-              required
               radius="md"
               variant="default"
             />
@@ -25,7 +24,6 @@ export default function ContactUs() {
               label="Last Name"
               placeholder=""
               name="lastName"
-              required
               radius="md"
               variant="default"
             />
@@ -36,7 +34,6 @@ export default function ContactUs() {
             placeholder=""
             type="email"
             name="email"
-            required
             radius="md"
             variant="default"
             mb="md"
@@ -46,7 +43,6 @@ export default function ContactUs() {
             label="Your Mobile Number"
             placeholder=""
             name="mobile"
-            required
             radius="md"
             variant="default"
             mb="md"
@@ -57,7 +53,6 @@ export default function ContactUs() {
             placeholder=""
             name="message"
             rows={5}
-            required
             radius="md"
             variant="default"
             mb="md"
@@ -65,7 +60,7 @@ export default function ContactUs() {
 
           <Checkbox label="I agree with the processing of personal data." name="check" mb="md" />
 
-          <button>Let's Talk</button>
+          <Button type="submit">Let's Talk</Button>
         </form>
       </div>
     </div>

@@ -13,6 +13,12 @@ export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
+        <script
+          async
+          defer
+          src="https://neutrix-cms-external-script.vercel.app/neutrix.js?siteId=neu8Ea5zhV3"
+        />
+
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta

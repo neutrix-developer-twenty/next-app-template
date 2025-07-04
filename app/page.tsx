@@ -33,6 +33,24 @@ export default function Home() {
           }}
         >
           <SimpleGrid cols={{ base: 1, lg: 2 }} spacing="md" mb="md">
+            <select
+              name="queryType"
+              id="type"
+              className="cursor-pointer w-full -mx-[4px] mq700:-mx-[6px] py-[14px] mq700:py-[9.6px] font-text-base-font-base text-base mq700:text-[14px] bg-transparent outline-none"
+            >
+              <option className="" value="">
+                Select Insurance
+              </option>
+              <option value="Auto Insurance">Auto Insurance</option>
+              <option value="Term Life Insurance">Term Life Insurance</option>
+              <option value="Homeowner's Insurance">Homeowner's Insurance</option>
+              <option value="Motorcycle Insurance">Motorcycle Insurance</option>
+              <option value="Renter's Insurance">Renter's Insurance</option>
+              <option value="RV Insurance">RV Insurance</option>
+              <option value="Snowmobile Insurance">Snowmobile Insurance</option>
+              <option value="Boat Insurance">Boat Insurance</option>
+            </select>
+
             <TextInput
               label="First Name"
               placeholder=""

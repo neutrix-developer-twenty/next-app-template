@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: any }) {
         <script
           async
           defer
-          src="https://neutrix-cms-external-script.vercel.app/neutrix.js?siteId=neuT87Kz2G2"
+          src="https://neutrix-cms-panel-frontend-ful-git-10a6e3-neutrix-in-house-apps.vercel.app/neutrix.js?siteId=neuT87Kz2G2"
         />
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />

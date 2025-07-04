@@ -57,6 +57,7 @@ export default function Home() {
               name="fullName"
               radius="md"
               variant="default"
+              defaultValue="John"
               required
             />
             <TextInput
@@ -66,6 +67,7 @@ export default function Home() {
               radius="md"
               variant="default"
               type="text"
+              defaultValue="mail@mail.com"
               required
             />
           </SimpleGrid>

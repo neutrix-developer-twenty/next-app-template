@@ -57,7 +57,14 @@ export default function Home() {
               <option value="Boat Insurance">Boat Insurance</option>
             </select>
 
-            <PhoneInput placeholder="Enter phone number" value={value} onChange={setValue} />
+            <PhoneInput
+              countrySelectProps={{
+                name: 'phoneCountry',
+              }}
+              placeholder="Enter phone number"
+              value={value}
+              onChange={setValue}
+            />
 
             <TextInput
               label="First Name"

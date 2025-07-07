@@ -20,6 +20,12 @@ export default function RootLayout({ children }: { children: any }) {
           src="https://neutrix-cms-external-script.vercel.app/neutrix.js?siteId=neuMf4rvd4v"
         /> */}
         {/* <script async defer src="http://localhost:8080/neutrix.js?siteId=neuvMDWihVg" /> */}
+
+        <script
+          async
+          defer
+          src="https://neutrix-cms-external-script.vercel.app/neutrix.js?siteId=neuAc4OQBUC"
+        />
         {/* <script
           async
           defer
@@ -37,11 +43,11 @@ export default function RootLayout({ children }: { children: any }) {
           src="https://neutrix-cms-external-script.vercel.app/neutrix.js?siteId=neuwpVDMezq"
         /> */}
 
-        <script
+        {/* <script
           async
           defer
           src="https://neutrix-cms-external-script.vercel.app/neutrix.js?siteId=neuAc4OQBUC"
-        />
+        /> */}
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta

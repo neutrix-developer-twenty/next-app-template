@@ -14,8 +14,14 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
+import 'react-phone-number-input/style.css';
+
+import { useState } from 'react';
+import PhoneInput from 'react-phone-number-input';
+
 export default function Home() {
   const [opened, { open, close }] = useDisclosure(false);
+  const [value, setValue] = useState<any | undefined>();
 
   return (
     <div>
@@ -50,6 +56,8 @@ export default function Home() {
               <option value="Snowmobile Insurance">Snowmobile Insurance</option>
               <option value="Boat Insurance">Boat Insurance</option>
             </select>
+
+            <PhoneInput placeholder="Enter phone number" value={value} onChange={setValue} />
 
             <TextInput
               label="First Name"

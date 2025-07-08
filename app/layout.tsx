@@ -19,13 +19,13 @@ export default function RootLayout({ children }: { children: any }) {
           defer
           src="https://neutrix-cms-external-script.vercel.app/neutrix.js?siteId=neuMf4rvd4v"
         /> */}
-        {/* <script async defer src="http://localhost:8080/neutrix.js?siteId=neuvMDWihVg" /> */}
+        <script async defer src="https://commandcenter.neutrix.co/neutrix.js?siteId=neum1GHuckJ" />
 
-        <script
+        {/* <script
           async
           defer
           src="https://neutrix-cms-external-script.vercel.app/neutrix.js?siteId=neuAc4OQBUC"
-        />
+        /> */}
         {/* <script
           async
           defer
